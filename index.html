@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Gradebook Comment Builder</title>
+  </head>
+
+  <body>
+    <div class="hero">
+      <h1 class="title">Gradebook Comment Builder</h1>
+    </div>
+
+    <main>
+        <form action="submit" id="comment-input">
+          <div id="qualities" class="form-group">
+            <h2>Qualities</h2>
+            <div class="form-control">
+              <input
+              type="checkbox"
+              name="worked-hard"
+              id="worked-hard"
+              value="worked hard"
+              />
+              <label for="worked-hard">worked hard</label>
+            </div>
+            <div class="form-control">
+              <input
+              type="checkbox"
+              name="creative"
+              id="creative"
+              value="creative"
+              />
+              <label for="creative">creative</label>
+            </div>
+            <div class="form-control">
+              <input
+              type="checkbox"
+              name="problem-solver"
+              id="problem-solver"
+              value="a good problem solver"
+              />
+              <label for="problem-solver">problem solving</label>
+            </div>
+            <div class="form-control">
+              <input
+              type="checkbox"
+              name="coder"
+              id="coder"
+              value="a good coder"
+              />
+              <label for="coder">coding</label>
+            </div>
+            <div class="form-control">
+              <input
+              type="checkbox"
+              name="designer"
+              id="designer"
+              value="a good designer"
+              />
+              <label for="designer">design</label>
+            </div>
+            </div>
+          <div id="college" class="form-group">
+            <h2>College</h2>
+            <div class="form-control">
+              <select name="college" id="college">
+                <option value="">none</option>
+                <option value="computer science">computer science</option>
+                <option value="game design">game design</option>
+                <option value="graphic design">graphic design</option>
+              </select>
+            </div>
+            <button id="comment-create">Generate</button>
+          </form>
+        </div>
+        <div id="comment-output-container">
+          <textarea
+          name="comment-output"
+          id="comment-output"
+          cols="1"
+          rows="1"
+          ></textarea>
+          <button id="click-copy">Click to copy</button>
+        </div>
+      </main>
+  </body>
+  </html>
