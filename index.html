@@ -4,88 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="app.js"></script>
     <title>Gradebook Comment Builder</title>
   </head>
 
   <body>
-    <div class="hero">
-      <h1 class="title">Gradebook Comment Builder</h1>
-    </div>
-
-    <main>
-        <form action="submit" id="comment-input">
-          <div id="qualities" class="form-group">
-            <h2>Qualities</h2>
-            <div class="form-control">
-              <input
-              type="checkbox"
-              name="worked-hard"
-              id="worked-hard"
-              value="worked hard"
-              />
-              <label for="worked-hard">worked hard</label>
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-title1">Gradebook Comment Builder</h1>
+      </div>
+    </section>
+    <section class="section">
+        <div class="container">
+          <form action="submit" id="comment-input">
+            <div id="qualities" class="form-group">
+              <h3 class="is-size-3">Qualities</h3>
+              <div class="control">
+                <label for="worked-hard" class="checkbox">
+                  <input
+                  type="checkbox"
+                  id="worked-hard"
+                  value="worked hard"
+                  />
+                  worked hard
+                </label>
+              </div>
+              <div class="control">
+                <label for="creative">
+                  <input
+                  type="checkbox"
+                  id="creative"
+                  value="creative"
+                  />
+                  creative
+                </label>
+              </div>
+              <div class="control">
+                <label for="problem-solver">
+                  <input
+                  type="checkbox"
+                  id="problem-solver"
+                  value="a good problem solver"
+                  />
+                  problem solving
+                </label>
+              </div>
+              <div class="control">
+                <label for="coder">
+                  <input
+                  type="checkbox"
+                  id="coder"
+                  value="a good coder"
+                  />
+                  coding
+                </label>
+              </div>
+              <div class="control">
+                <label for="designer">
+                  <input
+                  type="checkbox"
+                  id="designer"
+                  value="a good designer"
+                  />
+                  design
+                </label>
+              </div>
+            <div id="college" class="form-group">
+              <h2>College</h2>
+              <div class="control">
+                <div class="select">
+                  <select>
+                    <option value="">none</option>
+                    <option value="computer science">computer science</option>
+                    <option value="game design">game design</option>
+                    <option value="graphic design">graphic design</option>
+                  </select>
+                </div>
+              </div>
+              <button id="comment-create" class="button is-primary">Generate</button>
+            </form>
+          </div>
+          </section>
+          <section class="section">
+            <div class="container">
+              <textarea
+              name="comment-output"
+              id="comment-output"
+              cols="1"
+              rows="1"
+              class="textarea"
+              ></textarea>
+              <button id="click-copy" class="button is-primary">Click to copy</button>
             </div>
-            <div class="form-control">
-              <input
-              type="checkbox"
-              name="creative"
-              id="creative"
-              value="creative"
-              />
-              <label for="creative">creative</label>
-            </div>
-            <div class="form-control">
-              <input
-              type="checkbox"
-              name="problem-solver"
-              id="problem-solver"
-              value="a good problem solver"
-              />
-              <label for="problem-solver">problem solving</label>
-            </div>
-            <div class="form-control">
-              <input
-              type="checkbox"
-              name="coder"
-              id="coder"
-              value="a good coder"
-              />
-              <label for="coder">coding</label>
-            </div>
-            <div class="form-control">
-              <input
-              type="checkbox"
-              name="designer"
-              id="designer"
-              value="a good designer"
-              />
-              <label for="designer">design</label>
-            </div>
-            </div>
-          <div id="college" class="form-group">
-            <h2>College</h2>
-            <div class="form-control">
-              <select name="college" id="college">
-                <option value="">none</option>
-                <option value="computer science">computer science</option>
-                <option value="game design">game design</option>
-                <option value="graphic design">graphic design</option>
-              </select>
-            </div>
-            <button id="comment-create">Generate</button>
-          </form>
-        </div>
-        <div id="comment-output-container">
-          <textarea
-          name="comment-output"
-          id="comment-output"
-          cols="1"
-          rows="1"
-          ></textarea>
-          <button id="click-copy">Click to copy</button>
-        </div>
-      </main>
+          </section>
   </body>
   </html>
