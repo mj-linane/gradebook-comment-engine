@@ -5,114 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.css"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
     />
+    <link rel="stylesheet" href="style.css" />
     <script src="app.js"></script>
     <title>Gradebook Comment Builder</title>
   </head>
 
   <body>
-    <section class="section">
-      <div class="container">
-        <h1 class="title is-title1">Gradebook Comment Builder</h1>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div>
-          <form class="form">
-            <fieldset>
-              <!-- Text input-->
-              <div class="field">
-                <label class="label" for="name">First Name</label>
-                <div class="control">
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="john"
-                    class="input"
-                    required=""
-                  />
-                </div>
-              </div>
-              <!-- Multiple Checkboxes -->
-              <div class="field">
-                <label class="label" for="">Were Good At</label>
-                <div class="control">
-                  <label class="checkbox" for="problem">
-                    <input
-                      type="checkbox"
-                      name="problem"
-                      id="problem"
-                      value="problem solving"
-                    />
-                    problem solving
-                  </label>
-                  <div class="control">
-                    <label class="checkbox" for="creative">
-                      <input
-                        type="checkbox"
-                        name="creative"
-                        id="creative"
-                        value="creative solutions"
-                      />
-                      creative solutions
-                    </label>
-                  </div>
-                  <div class="control">
-                    <label class="checkbox" for="designing">
-                      <input
-                        type="checkbox"
-                        name="designing"
-                        id="designing"
-                        value="designing"
-                      />
-                      designing
-                    </label>
-                  </div>
-                  <div class="control">
-                    <label class="checkbox" for="coding">
-                      <input
-                        type="checkbox"
-                        name="coding"
-                        id="coding"
-                        value="coding"
-                      />
-                      coding
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <!-- Select College -->
-              <div class="field">
-                <label class="label" for="college"
-                  >Recommend You Go To School For</label
-                >
-                <div class="control">
-                  <div class="select">
-                    <select id="college" name="college">
-                      <option>computer science</option>
-                      <option>game design/coding</option>
-                      <option>graphic design</option>
-                      <option>web design</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <button id="generate-btn" class="button is-primary">Generate</button>
-            </fieldset>
-          </form>
-          <div class="field">
-            <label for="output"  class="label"></label>
-            <div class="control">
-              <textarea class="textarea" placeholder="e.g. this is a comment" readonly></textarea>
+    <h1>Gradebook Comment Builder</h1>
+    <div class="form-box">
+      <form>
+        <fieldset>
+          <!-- Text input-->
+          <div class="control-group">
+            <label for="name">First Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="john"
+              required=""
+            />
+          </div>
+          <!-- Multiple Checkboxes -->
+          <label>Were good at: (Pick 2)</label>
+          <div class="control-group">
+            <label for="problem"> problem solving</label>
+            <input
+            type="checkbox"
+            name="problem"
+            id="problem"
+            value="problem solving"
+            />
+          </div>
+          <div class="control-group">
+            <label for="creative"> creative solutions </label>
+            <input
+              type="checkbox"
+              name="creative"
+              id="creative"
+              value="generating creative solutions"
+            />
+          </div>
+          <div class="control-group">
+            <label for="designing">
+              designing
+            </label>
+            <input
+              type="checkbox"
+              name="designing"
+              id="designing"
+              value="designing"
+            />
+          </div>
+          <div class="control-group">
+            <label for="coding"> coding </label>
+            <input
+              type="checkbox"
+              name="coding"
+              id="coding"
+              value="programming"
+            />
+          </div>
+          <div class="control-group">
+            <!-- Select College -->
+            <label for="college">Recommend You Go To School For</label>
+            <select id="college">
+              <option>computer science</option>
+              <option>game design/coding</option>
+              <option>graphic design</option>
+              <option>web design</option>
+            </select>
+            <div>
+              <button id="generate-btn" class="button button-primary">
+                Generate
+              </button>
             </div>
           </div>
-        <div>
-          <button id="copy-btn" class="button is-primary">Click to copy</button>
-        </div>
-    </section>
+        </fieldset>
+      </form>
+      <div>
+        <label for="output">Comment</label>
+        <textarea
+          class="textarea"
+          id="output"
+          placeholder="e.g. this is a comment"
+          readonly
+        ></textarea>
+      </div>
+      <div>
+        <button id="copy-btn" class="button button-primary">
+          Click to copy
+        </button>
+      </div>
+    </div>
   </body>
 </html>
